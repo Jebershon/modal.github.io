@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Modal</title>
+</head>
+<body>
+    <style>
+        .font {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+        }
+
+        .card {
+            margin: 1cm;
+            padding: 1cm;
+            border: 1cm;
+            background-color: rgba(255, 255, 255, 0.50);
+            display: flex;
+        }
+
+        body {
+            background-image: url(Asserts/3369338.jpg)
+        }
+        .modal-content{
+            background-color: aqua;
+        }
+        .modal-header{
+            color: aqua;
+            background-color: darkblue;
+        }
+    </style>
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Sign-in/Sign-up</h5>
+            <div class="card-body">
+                <h5 class="card-title">Fill the Details:</h5>
+                <form action="#" method="post" name="Sign-in">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Username</label>
+                        <input type="text" class="form-control form-control-sm" name="Username" id="Username"
+                            aria-describedby="helpId" placeholder="Username">
+                        <label for="" class="form-label">Username</label>
+                        <input type="password" class="form-control form-control-sm" name="Password" id="Password"
+                            aria-describedby="helpId" placeholder="Password">
+                            <br>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Terms And Conditions
+  </button>
+  
+  <!-- Modal -->
+ 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Terms and Conditions</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aperiam perferendis
+                  saepe obcaecati, accusamus, dolorum non suscipit enim, soluta et voluptate?
+                  Voluptatibus ducimus quos sapiente ullam voluptatem! Rerum, fugiat vero?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptates odit
+                  minima nihil minus ut, quae, corporis rerum facilis dolor accusantium molestiae sit
+                  cumque nobis odio suscipit voluptate? Cumque, dolore!
+              </p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+      </div>
+  </div>
+</div>
+      <script>
+        const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+    </script>
+</body>
+</html>
